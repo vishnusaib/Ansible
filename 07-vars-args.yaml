@@ -5,3 +5,4 @@
   - name: print course info
     ansible.builtin.debug:
       msg: "Hello I am learning {{ COURSE }}, Duration: {{ DURATION }}, Trainer is: {{ TRAINER }}"
+# we have to give the arguments in command line as -e "COURSE=ARGS" -e "DURATION=10HR" -e "TRAINER=JOHN"
