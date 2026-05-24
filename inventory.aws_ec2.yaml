@@ -4,7 +4,7 @@ regions:
 keyed_group:
   # add hosts to tag_Name_value groups for each aws_ec2 host's tags.Name variable.
 - key: tags.Name
-  prefix: ""
+  prefix: "dynamic_"
   separator: ""
 filters:
 # This selects only running instances with tag `Environment` tag set to `dev`.
