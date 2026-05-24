@@ -1,0 +1,13 @@
+plugin: amazon.aws.aws_ec2
+regions:
+- us-east-1
+filters:
+# This selects only running instances with tag `Environment` tag set to `dev`.
+  tag:Name: frontend
+  instance-state-name: running
+hostnames:
+  # This option allows displaying the public ip addresses.
+  - ip-address
+compose:
+  # This sets the ansible_host variable to connect with the private IP address without changing the hostname.
+  ansible_hosts: private_ip_address
